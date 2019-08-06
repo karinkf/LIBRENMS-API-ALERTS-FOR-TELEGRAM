@@ -24,8 +24,8 @@ import re
 from prettytable import PrettyTable
 from datetime import datetime
 
-auth_token = "bffb295fb3431e8d190fc4cddb9731d3"
-api_url = "http://192.168.0.108/api/v0/"
+auth_token = "YOURTOKENHERE"
+api_url = "YOURAPI"
 
 request_headers = {
 	"Accept-Language": "en-US,en;q=0.5",
