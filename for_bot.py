@@ -7,7 +7,7 @@ import os
 from prettytable import PrettyTable
 from telepot.loop import MessageLoop
 
-db = MySQLdb.connect(host="192.168.0.108", user="root", passwd="secret", db="librenms")
+db = MySQLdb.connect(host="127.0.0.1", user="user", passwd="passwd", db="librenms")
 cursor = db.cursor()
 sql_command = """ SELECT * FROM services """   
 cursor = db.cursor()
@@ -47,7 +47,7 @@ def handle(msg):
                              bot.sendMessage(chat_id, str("Device ID : ")+str(result[0])+str(", ")+str("Device/Hostname : ")+str(result[1])+str(", ")+str("SysName : ")+str(result[2]))
                     
 # Token of bot account
-TOKEN = "897901114:AAHMZjnYLHBMrFF-ClDVNYa_YphgXBtlofw"
+TOKEN = "YOURTOKENHERE"
 bot = telepot.Bot(TOKEN)
 bot.message_loop(handle)
 print ('Bot Ready!')
